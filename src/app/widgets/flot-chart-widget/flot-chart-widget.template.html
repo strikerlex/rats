@@ -1,0 +1,100 @@
+<div class="col-lg-6 col-12">
+  <section widget class="widget widget-chart-stats-simple">
+    <header>
+      <div class="row">
+        <div class="col-3">
+          <h6>
+            Total Unidades
+          </h6>
+          <p class="value5">
+            Enereo, 2018
+          </p>
+        </div>
+        <div class="col-3">
+          <h5>
+            <small>Mejor</small>
+          </h5>
+          <p class="value6 fs-sm">
+            Marzo, 2017 + 1
+          </p>
+        </div>
+      </div>
+      <div class="widget-controls">
+        <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+        <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+      </div>
+    </header>
+    <div class="widget-body">
+      <div class="chart-stats">
+        <p class="text-muted fs-mini mt-xs">
+          <i class="fa fa-map-marker fa-5x pull-left"></i>
+          <span class="fw-semi-bold text-gray-dark">Cuadro:</span> El crecimiento de unidades en la plataforma se refleja en un cuadro progresivo:
+        </p>
+        <div class="btn-toolbar">
+          <button class="btn btn-xs btn-success">Detalle</button>
+          <button class="btn btn-xs btn-default">Imprimir</button>
+        </div>
+      </div>
+      <div class="chart bg-body-light">
+        <div flot-chart [data]="generateRandomData([{
+                        label: 'Visitors', color: configFn.darkenColor(config.settings.colors['gray-lighter'], .05)
+                    },{
+                        label: 'Charts', color: config.settings.colors['brand-danger']
+                    }])" class="chart-inner"></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="col-lg-6 col-12">
+  <section widget class="widget widget-chart-stats-simple">
+    <header>
+      <h6 class="mb-0">
+        <span class="fw-semi-bold">Mantenimientos</span> <span class="badge badge-pill badge-danger">2017</span>
+      </h6>
+      <span class="text-muted fs-mini">Estadistica <a href="#">6 Meses</a></span>
+      <div class="widget-controls">
+        <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+        <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+      </div>
+    </header>
+    <div class="widget-body">
+      <div class="chart-stats">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="clearfix m-t-1">
+              <h6 class="pull-left text-muted mb-xs">
+                Pendientes
+              </h6>
+              <p class="pull-right h6 mb-xs">
+                <span class="fw-semi-bold">1532</span>
+              </p>
+            </div>
+            <div class="clearfix">
+              <h6 class="pull-left m-0 text-muted">
+                Realizados
+              </h6>
+              <p class="pull-right">
+                <span class="fw-semi-bold">5608</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 text-right m-t-1">
+            <h6 class="text-muted mb-xs">Incidencias</h6>
+            <p class="fw-semi-bold">325</p>
+          </div>
+          <div class="col-md-4 text-right m-t-1">
+            <h6 class="text-muted mb-xs">Ultima Actualizacion</h6>
+            <p class="fw-semi-bold">23.01.2018</p>
+          </div>
+        </div>
+      </div>
+      <div class="chart bg-body-light">
+        <div flot-chart [data] = "generateRandomData([{
+                        label: 'Controllers', color: '#777'
+                    },{
+                        label: 'Scopes', color: config.settings.colors['brand-warning']
+                    }])" class="chart-inner"></div>
+      </div>
+    </div>
+  </section>
+</div>
